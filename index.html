@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RASPBERRY | All Kinds of Mobile Phone Services</title>
+  <title>RASPBERRY | Professional Mobile Services & Shop in Al Ain</title>
+  <meta name="description" content="RASPBERRY offers professional mobile phone services and sales in Al Ain - repairs, sales, accessories and IT solutions. Call +971 55 949 3269">
   <style>
     body {
       margin: 0;
@@ -40,8 +41,9 @@
       align-items: center;
     }
     .logo img {
-      height: 100px;
+      height: 60px;
       margin-right: 10px;
+      border-radius: 5px;
     }
     .logo span {
       display: flex;
@@ -57,29 +59,57 @@
       font-size: 1em;
       font-weight: bold;
     }
+    .cart-icon {
+      position: relative;
+      margin-left: 15px;
+    }
+    .cart-count {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      background: #ff3c3c;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    .cta-banner {
+      background: #ff3c3c;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .cta-banner a {
+      color: white;
+      text-decoration: underline;
+      font-weight: bold;
+    }
     header.hero {
-      background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9');
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598128558393-70ff21433be0');
       background-size: cover;
       background-position: center;
       text-align: center;
       color: white;
-      padding: 100px 20px;
+      padding: 120px 20px;
       animation: fadeIn 2s ease-in;
     }
     header.hero h1 {
-      font-size: 2.8em
+      font-size: 2.8em;
       margin-bottom: 20px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
-    header.hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 20px;
-  color: #333; /* Darker color for better contrast */
-}
-
-header.hero p {
-  font-size: 1.2em;
-  color: red; /* Darker color for better contrast */
-}
+    header.hero p {
+      font-size: 1.2em;
+      color: #f5f5f5;
+      max-width: 700px;
+      margin: 0 auto;
+    }
     section {
       padding: 60px 20px;
       max-width: 1200px;
@@ -97,47 +127,117 @@ header.hero p {
     }
     .service-card {
       background: #2c2c2c;
-      padding: 20px;
-      border-radius: 10px;
+      padding: 25px 20px;
+      border-radius: 8px;
       transition: transform 0.3s ease, background 0.3s;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      border-left: 3px solid #ff3c3c;
     }
     .service-card:hover {
       background: #383838;
       transform: translateY(-5px);
     }
+    .service-card i {
+      color: #ff3c3c;
+      font-size: 2em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .product-card {
+      background: #2c2c2c;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s;
+      border: 1px solid #383838;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .product-image {
+      height: 200px;
+      width: 100%;
+      object-fit: contain;
+      background: #1e1e1e;
+      padding: 10px;
+    }
+    .product-info {
+      padding: 15px;
+    }
+    .product-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: white;
+    }
+    .product-price {
+      color: #ff3c3c;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+    .add-to-cart {
+      background: #ff3c3c;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.3s;
+    }
+    .add-to-cart:hover {
+      background: #e62e2e;
+    }
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 15px;
     }
     .gallery img {
-       width: 125%;
-      max-width:200px;
-      margin: 10px;
-      border-radius: 4px;
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin: 0;
+      border-radius: 8px;
       transition: transform 0.3s ease;
-
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
     .gallery img:hover {
       transform: scale(1.05);
     }
     form input, form textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border: none;
       border-radius: 5px;
       background: #1e1e1e;
       color: white;
+      font-family: inherit;
     }
     form button {
       background: #ff3c3c;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      font-weight: bold;
+      font-size: 1em;
     }
     form button:hover {
       background: #e62e2e;
@@ -145,26 +245,209 @@ header.hero p {
     .footer {
       background: #121212;
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       font-size: 0.9em;
       color: #888;
+      margin-top: 40px;
     }
     .social-media {
-      margin-top: 20px;
+      margin: 25px 0;
     }
     .social-media a {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0 15px;
       color: #ff3c3c;
-      font-size: 1.5em;
+      font-size: 1.8em;
       text-decoration: none;
+      transition: color 0.3s;
     }
     .social-media a:hover {
       color: white;
     }
-    @media (max-width: 600px) {
+    .contact-methods {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 0;
+    }
+    .contact-method {
+      text-align: center;
+      margin: 15px;
+    }
+    .contact-method i {
+      font-size: 2em;
+      color: #ff3c3c;
+      margin-bottom: 10px;
+    }
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+      display: none;
+    }
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100%;
+      background: #1a1a1a;
+      z-index: 1000;
+      transition: right 0.3s;
+      padding: 20px;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+      overflow-y: auto;
+    }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #383838;
+    }
+    .close-cart {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .cart-items {
+      margin-bottom: 20px;
+    }
+    .cart-item {
+      display: flex;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #383838;
+    }
+    .cart-item-image {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-right: 15px;
+      background: #2c2c2c;
+      padding: 5px;
+      border-radius: 4px;
+    }
+    .cart-item-details {
+      flex: 1;
+    }
+    .cart-item-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .cart-item-price {
+      color: #ff3c3c;
+    }
+    .remove-item {
+      color: #888;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+    .cart-total {
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 20px 0;
+      text-align: right;
+    }
+    .checkout-btn {
+      background: #ff3c3c;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .checkout-btn:hover {
+      background: #e62e2e;
+    }
+    .checkout-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      z-index: 10000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .checkout-form-container {
+      background: #2c2c2c;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      animation: slideIn 0.3s ease-out;
+    }
+    .close-checkout {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: #ff3c3c;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+    .checkout-form input,
+    .checkout-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #1e1e1e;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .checkout-form button[type="submit"] {
+      background: #ff3c3c;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+      transition: background 0.3s;
+    }
+    .checkout-form button[type="submit"]:hover {
+      background: #e62e2e;
+    }
+    @media (max-width: 768px) {
       header.hero h1 {
-        font-size: 1.8em;
+        font-size: 2em;
+      }
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo {
+        margin-bottom: 15px;
+      }
+      .cart-sidebar {
+        width: 300px;
+      }
+      .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+      .checkout-form-container {
+        margin: 20px auto;
+        padding: 20px;
       }
     }
     @keyframes fadeIn {
@@ -175,11 +458,73 @@ header.hero p {
       from { transform: translateY(30px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+    
+    /* NEW: Quantity controls styling */
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 5px 0;
+    }
+    .qty-btn {
+      background: #383838;
+      color: white;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .remove-item {
+      background: none;
+      border: none;
+      color: #ff3c3c;
+      font-size: 1.2em;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    
+    /* NEW: Order summary in checkout */
+    .order-summary {
+      background: #2c2c2c;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .checkout-item {
+      padding: 5px 0;
+      border-bottom: 1px solid #383838;
+    }
+    .checkout-total {
+      font-weight: bold;
+      text-align: right;
+      margin-top: 10px;
+      color: #ff3c3c;
+    }
+    
+    /* NEW: Trust badges */
+    .trust-badges {
+      display: flex;
+      gap: 15px;
+      margin: 30px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .trust-badges div {
+      background: #2c2c2c;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+    .trust-badges i {
+      color: #ff3c3c;
+      margin-right: 5px;
+    }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
   <nav>
     <div class="logo">
       <img src="imageras.jpg" alt="RASPBERRY Logo">
@@ -192,90 +537,579 @@ header.hero p {
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#shop">Shop</a>
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
+      <a href="#" id="open-cart" class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+      </a>
     </div>
   </nav>
 
   <header id="home" class="hero">
-    <h1>Welcome to RASPBERRY</h1>
-    <p>All kinds of Mobile Phone Services – Where technology meets trust.</p>
+    <h1>Professional Mobile Services & Shop in Al Ain</h1>
+    <p>Your trusted partner for mobile repairs, sales, and IT solutions with guaranteed quality service.</p>
   </header>
- <section id="about">
+
+  <div class="cta-banner">
+    <h3>Need urgent phone repair or want to buy a new phone? <a href="#contact">Contact us now for quick service!</a></h3>
+  </div>
+
+  <!-- NEW: Trust badges section -->
+  <div class="trust-badges">
+    <div><i class="fas fa-shield-alt"></i> 1-Year Warranty</div>
+    <div><i class="fas fa-certificate"></i> Certified Technicians</div>
+    <div><i class="fas fa-star"></i> 100+ Happy Customers</div>
+  </div>
+
+  <section id="about">
     <h2>About Us</h2>
-    <p>RASPBERRY is your one-stop shop for everything mobile and tech. From sales to service, we offer a complete solution with unmatched support and quality.</p>
+    <p>RASPBERRY is your premier destination for comprehensive mobile and tech solutions in Al Ain. With years of experience, our certified technicians provide reliable service with a commitment to quality and customer satisfaction. We specialize in both hardware and software solutions for all major brands.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">Website Design and Development</div>
-      <div class="service-card">Software Development & Consultation</div>
-      <div class="service-card">Data Recovery Services</div>
-      <div class="service-card">Laptop Sales & Services</div>
-      <div class="service-card">Computer & Mobile Sales</div>
-      <div class="service-card">CCTV Services</div>
-      <div class="service-card">Used Computer & Mobile Trading</div>
-      <div class="service-card">Networking & IT Infrastructure</div>
-      <div class="service-card">Annual Maintenance Contracts</div>
-      <div class="service-card">Mobile Accessories</div>
+      <div class="service-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Website Design</h3>
+        <p>Custom websites for your business</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-code"></i>
+        <h3>Software Development</h3>
+        <p>Custom software solutions</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-hdd"></i>
+        <h3>Data Recovery</h3>
+        <p>Recover your precious data</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-laptop"></i>
+        <h3>Laptop Services</h3>
+        <p>Sales & repairs</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Sales</h3>
+        <p>Latest models with warranty</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-video"></i>
+        <h3>CCTV Services</h3>
+        <p>Installation & maintenance</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-exchange-alt"></i>
+        <h3>Used Devices</h3>
+        <p>Quality pre-owned devices</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>IT infrastructure solutions</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-file-contract"></i>
+        <h3>AMC Contracts</h3>
+        <p>Annual maintenance plans</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-headphones"></i>
+        <h3>Accessories</h3>
+        <p>Quality mobile accessories</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop">
+    <h2>Mobile Shop</h2>
+    <p>Shop the newest smartphones in UAE with cash on delivery</p>
+    
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_UF1000,1000_QL80_.jpg" alt="iPhone 15 Pro" class="product-image">
+        <div class="product-info">
+          <div class="product-title">iPhone 15 Pro 128GB</div>
+          <div class="product-description">6.1" Super Retina XDR, A17 Pro chip</div>
+          <div class="product-price">AED 4,299</div>
+          <button class="add-to-cart" data-id="1" data-name="iPhone 15 Pro 128GB" data-price="4299" data-image="https://m.media-amazon.com/images/I/61bK6PMOC3L._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81H7fqOZ3aL._AC_UF1000,1000_QL80_.jpg" alt="Samsung S23 Ultra" class="product-image">
+        <div class="product-info">
+          <div class="product-title">Samsung S23 Ultra 256GB</div>
+          <div class="product-description">6.8" Dynamic AMOLED, 200MP camera</div>
+          <div class="product-price">AED 3,999</div>
+          <button class="add-to-cart" data-id="2" data-name="Samsung S23 Ultra 256GB" data-price="3999" data-image="https://m.media-amazon.com/images/I/81H7fqOZ3aL._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71T5NVOgbpL._AC_UF1000,1000_QL80_.jpg" alt="Google Pixel 8 Pro" class="product-image">
+        <div class="product-info">
+          <div class="product-title">Google Pixel 8 Pro 128GB</div>
+          <div class="product-description">6.7" OLED, Tensor G3 chip</div>
+          <div class="product-price">AED 3,299</div>
+          <button class="add-to-cart" data-id="3" data-name="Google Pixel 8 Pro 128GB" data-price="3299" data-image="https://m.media-amazon.com/images/I/71T5NVOgbpL._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UF1000,1000_QL80_.jpg" alt="OnePlus 11" class="product-image">
+        <div class="product-info">
+          <div class="product-title">OnePlus 11 5G 256GB</div>
+          <div class="product-description">6.7" Fluid AMOLED, Snapdragon 8 Gen 2</div>
+          <div class="product-price">AED 2,799</div>
+          <button class="add-to-cart" data-id="4" data-name="OnePlus 11 5G 256GB" data-price="2799" data-image="https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61cwywLZR-L._AC_UF1000,1000_QL80_.jpg" alt="Xiaomi 13 Pro" class="product-image">
+        <div class="product-info">
+          <div class="product-title">Xiaomi 13 Pro 256GB</div>
+          <div class="product-description">6.73" AMOLED, Leica camera</div>
+          <div class="product-price">AED 2,499</div>
+          <button class="add-to-cart" data-id="5" data-name="Xiaomi 13 Pro 256GB" data-price="2499" data-image="https://m.media-amazon.com/images/I/61cwywLZR-L._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61BGE6iu4AL._AC_UF1000,1000_QL80_.jpg" alt="Samsung Galaxy Z Flip5" class="product-image">
+        <div class="product-info">
+          <div class="product-title">Samsung Galaxy Z Flip5 256GB</div>
+          <div class="product-description">6.7" Foldable AMOLED, Snapdragon 8 Gen 2</div>
+          <div class="product-price">AED 3,799</div>
+          <button class="add-to-cart" data-id="6" data-name="Samsung Galaxy Z Flip5 256GB" data-price="3799" data-image="https://m.media-amazon.com/images/I/61BGE6iu4AL._AC_UF1000,1000_QL80_.jpg">Add to Cart</button>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="gallery">
-    <h2>Gallery</h2>
+    <h2>Our Work</h2>
     <div class="gallery">
-      <img src="jonas-leupe-wK-elt11pF0-unsplash.jpg" alt="Mobile 1">
-      <img src="michael-c-CgLRqyW65Mw-unsplash.jpg" alt="Mobile 2">
+      <img src="jonas-leupe-wK-elt11pF0-unsplash.jpg" alt="Mobile Repair">
+      <img src="michael-c-CgLRqyW65Mw-unsplash.jpg" alt="Mobile Sales">
       <img src="WhatsApp Image 2025-04-11 at 1.54.53 PM.jpeg" alt="QR Code">
-
+      <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6" alt="Technician Working">
+      <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c" alt="Mobile Accessories">
+      <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e" alt="Computer Repair">
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p>📱 +971 55 949 3269<br>
-       📲 WhatsApp: +971 50 100 3929<br>
-       ☎️ +971 3 751 3025</p>
+    
+    <div class="contact-methods">
+      <div class="contact-method">
+        <i class="fas fa-phone-alt"></i>
+        <h3>Call Us</h3>
+        <p>+971 55 949 3269</p>
+        <p>+971 3 751 3025</p>
+      </div>
+      <div class="contact-method">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p>+971 50 100 3929</p>
+      </div>
+      <div class="contact-method">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Location</h3>
+        <p>Opp. Murabba Police Station</p>
+        <p>Al Ain, U.A.E</p>
+      </div>
+    </div>
 
-    <h3>Branches</h3>
-    <p>
-      Four Plus Mobile Alwaqan: +971 50 607 3300<br>
-      Wahat Al Kazna Mobile Phone Kazna: +971 56 751 2337<br>
-      Rahma Computer and Mobile Phones L.L.C: +971 50 222 6447<br>
-      Future Generation Mobile Phones – Al Yahar: +971 52 177 7887<br>
-      Future Generation Mobile Phones – Rahba: +971 50 222 6447
-    </p>
+    <h3>Our Branches</h3>
+    <ul>
+      <li><strong>Four Plus Mobile Alwaqan:</strong> +971 50 607 3300</li>
+      <li><strong>Wahat Al Kazna Mobile Phone Kazna:</strong> +971 56 751 2337</li>
+      <li><strong>Rahma Computer and Mobile Phones L.L.C:</strong> +971 50 222 6447</li>
+      <li><strong>Future Generation Mobile Phones – Al Yahar:</strong> +971 52 177 7887</li>
+      <li><strong>Future Generation Mobile Phones – Rahba:</strong> +971 50 222 6447</li>
+    </ul>
 
-    <h3>Location</h3>
-    <p>RASPBERRY PHONES<br>
-       📱 +971 50 100 3929<br>
-       <a href="https://g.co/kgs/qx6p3ZZ" target="_blank">Click here for the location</a><br>
-       Opp. Murabba Police Station, Al Ain - U.A.E</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d116436.14124884394!2d55.694065834000796!3d24.21975533137951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e8ab72be055bcc5%3A0x7886857a95c562f6!2sAl%20muraba'a%20-%20opposite%20police%20station%20-%20Abu%20Dhabi!3m2!1d24.2197775!2d55.776467399999994!5e0!3m2!1sen!2sae!4v1744358736400!5m2!1sen!2sae" 
+      width="100%" height="350" style="border:0; border-radius: 10px; margin:20px 0;" 
+      allowfullscreen="" loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d116436.14124884394!2d55.694065834000796!3d24.21975533137951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3e8ab72be055bcc5%3A0x7886857a95c562f6!2sAl%20muraba'a%20-%20opposite%20police%20station%20-%20Abu%20Dhabi!3m2!1d24.2197775!2d55.776467399999994!5e0!3m2!1sen!2sae!4v1744358736400!5m2!1sen!2sae" 
-    width="500" height="300" style="border:0; border-radius: 10px; margin:20px 0;" 
-    allowfullscreen="" loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
-    <h3>Contact Form</h3>
-    <form action="https://formspree.io/f/xoqgdgar" method="POST">
+    <h3>Send Us a Message</h3>
+    <form id="contact-form">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
       <button type="submit">Send Message</button>
     </form>
 
     <div class="social-media">
       <a href="https://www.instagram.com/raspberrymobiles" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://wa.me/971501003929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="tel:+971559493269"><i class="fas fa-phone-alt"></i></a>
+      <a href="mailto:info@raspberry.com"><i class="fas fa-envelope"></i></a>
     </div>
   </section>
 
   <div class="footer">
-    &copy; 2025 RASPBERRY. All rights reserved.
+    <p>&copy; 2025 RASPBERRY. All rights reserved.</p>
+    <p>Professional Mobile Phone Services & Shop in Al Ain, UAE</p>
   </div>
 
+  <!-- Cart Sidebar -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    
+    <div class="cart-items" id="cart-items">
+      <p class="empty-cart-message">Your cart is empty</p>
+    </div>
+    
+    <div class="cart-total" id="cart-total">
+      Total: AED 0
+    </div>
+    
+    <button class="checkout-btn" id="checkout-btn">
+      <i class="fas fa-truck"></i> Cash on Delivery
+    </button>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-form-container">
+      <button id="close-checkout" class="close-checkout">×</button>
+      <h2 style="color:#ff3c3c; margin-top:0;">Complete Your Order</h2>
+      
+      <!-- NEW: Order summary in checkout modal -->
+      <div class="order-summary">
+        <h4>Your Order</h4>
+        <div id="checkout-items"></div>
+        <div class="checkout-total">Total: AED <span id="checkout-total-amount">0</span></div>
+      </div>
+      
+      <form id="customer-details-form" class="checkout-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="address" placeholder="Full Delivery Address" required rows="3"></textarea>
+        <button type="submit">Confirm Order</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- WhatsApp Float Button -->
+  <a href="https://wa.me/971501003929" 
+     style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 2px 10px rgba(0,0,0,0.2);z-index:1000;">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your User ID
+    emailjs.init('Nmk26-IYIRv_N2WV5');
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const cart = [];
+      const cartCount = document.querySelector('.cart-count');
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      const openCartBtn = document.getElementById('open-cart');
+      const closeCartBtn = document.getElementById('close-cart');
+      const cartOverlay = document.getElementById('cart-overlay');
+      const cartSidebar = document.getElementById('cart-sidebar');
+      const checkoutBtn = document.getElementById('checkout-btn');
+      const checkoutModal = document.getElementById('checkout-modal');
+      const closeCheckout = document.getElementById('close-checkout');
+      const customerForm = document.getElementById('customer-details-form');
+      
+      // Open/close cart
+      openCartBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        updateCheckoutSummary();
+        cartOverlay.style.display = 'block';
+        cartSidebar.style.right = '0';
+        document.body.style.overflow = 'hidden';
+      });
+      
+      closeCartBtn.addEventListener('click', closeCart);
+      cartOverlay.addEventListener('click', closeCart);
+      
+      function closeCart() {
+        cartSidebar.style.right = '-400px';
+        cartOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Add to cart
+      document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          const name = this.getAttribute('data-name');
+          const price = parseFloat(this.getAttribute('data-price'));
+          const image = this.getAttribute('data-image');
+          
+          const existingItem = cart.find(item => item.id === id);
+          
+          if (existingItem) {
+            existingItem.quantity += 1;
+          } else {
+            cart.push({
+              id,
+              name,
+              price,
+              image,
+              quantity: 1
+            });
+          }
+          
+          updateCart();
+          openCartBtn.click();
+        });
+      });
+      
+      // Update cart UI with quantity controls
+      function updateCart() {
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+        
+        if (cart.length === 0) {
+          cartItems.innerHTML = '<p class="empty-cart-message">Your cart is empty</p>';
+          checkoutBtn.style.display = 'none';
+        } else {
+          checkoutBtn.style.display = 'block';
+          cartItems.innerHTML = cart.map(item => `
+            <div class="cart-item">
+              <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+              <div class="cart-item-details">
+                <div class="cart-item-title">${item.name}</div>
+                <div class="quantity-controls">
+                  <button class="qty-btn" data-id="${item.id}" data-action="decrease">−</button>
+                  <span>${item.quantity}</span>
+                  <button class="qty-btn" data-id="${item.id}" data-action="increase">+</button>
+                </div>
+                <div class="cart-item-price">AED ${(item.price * item.quantity).toFixed(2)}</div>
+              </div>
+              <button class="remove-item" data-id="${item.id}">×</button>
+            </div>
+          `).join('');
+        }
+        
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        cartTotal.textContent = `Total: AED ${total.toFixed(2)}`;
+        
+        // Add event listeners to new buttons
+        document.querySelectorAll('.remove-item').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const index = cart.findIndex(item => item.id === id);
+            if (index !== -1) cart.splice(index, 1);
+            updateCart();
+          });
+        });
+        
+        document.querySelectorAll('.qty-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const id = this.getAttribute('data-id');
+            const action = this.getAttribute('data-action');
+            const item = cart.find(item => item.id === id);
+            
+            if (action === 'increase') item.quantity++;
+            if (action === 'decrease' && item.quantity > 1) item.quantity--;
+            
+            updateCart();
+          });
+        });
+      }
+      
+      // Update checkout summary
+      function updateCheckoutSummary() {
+        const checkoutItems = document.getElementById('checkout-items');
+        const checkoutTotal = document.getElementById('checkout-total-amount');
+        
+        if (cart.length === 0) {
+          checkoutItems.innerHTML = '<p>No items in cart</p>';
+          checkoutTotal.textContent = '0';
+          return;
+        }
+        
+        checkoutItems.innerHTML = cart.map(item => `
+          <div class="checkout-item">
+            ${item.name} x${item.quantity} = AED ${(item.price * item.quantity).toFixed(2)}
+          </div>
+        `).join('');
+        
+        checkoutTotal.textContent = cart.reduce((total, item) => 
+          total + (item.price * item.quantity), 0).toFixed(2);
+      }
+      
+      // UAE phone validation
+      function isValidUAEPhone(phone) {
+        return /^(?:\+971|00971|0)?5\d{8}$/.test(phone) || 
+               /^05\d{8}$/.test(phone) ||
+               /^5\d{8}$/.test(phone);
+      }
+      
+      // Checkout button click handler
+      checkoutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (cart.length === 0) {
+          alert('Your cart is empty!');
+          return;
+        }
+        updateCheckoutSummary();
+        checkoutModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      });
+      
+      // Close checkout modal
+      closeCheckout.addEventListener('click', function() {
+        checkoutModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      });
+      
+      // Checkout form submission
+      customerForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const customerName = formData.get('name');
+        const customerEmail = formData.get('email');
+        const customerPhone = formData.get('phone');
+        const customerAddress = formData.get('address');
+        
+        if (!isValidUAEPhone(customerPhone)) {
+          alert('Please enter a valid UAE phone number\n\nAccepted formats:\n• 05xxxxxxxx (e.g. 0559493269)\n• 5xxxxxxxx (e.g. 559493269)\n• +9715xxxxxxxx (e.g. +971559493269)\n• 009715xxxxxxxx (e.g. 00971559493269)');
+          return;
+        }
+        
+        const submitBtn = customerForm.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Processing...';
+        
+        try {
+          // Prepare order details
+          const orderItems = cart.map(item => 
+            `• ${item.name} (x${item.quantity}) - AED ${(item.price * item.quantity).toFixed(2)}`
+          ).join('\n');
+          
+          const orderTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2);
+          const orderId = 'RSP-' + Date.now().toString().slice(-6);
+          
+          // Send confirmation email (YOUR TEMPLATE ID HERE)
+          await emailjs.send("service_a4s1kdf", "template_j21ksfz", {
+            customer_name: customerName,
+            customer_email: customerEmail,
+            customer_phone: customerPhone,
+            customer_address: customerAddress,
+            order_id: orderId,
+            order_date: new Date().toLocaleDateString('en-AE', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            }),
+            order_items: orderItems,
+            order_total: orderTotal,
+            shop_name: "RASPBERRY Mobile Shop",
+            shop_phone: "+971 55 949 3269",
+            email: customerEmail // Customer's email
+          }).then(
+            function(response) {
+              console.log('Customer email sent', response);
+            },
+            function(error) {
+              console.error('Customer email failed', error);
+            }
+          );
+ // 2. Send ORDER NOTIFICATION to STORE EMAIL
+          await emailjs.send("service_a4s1kdf", "template_j21ksfz", {
+            customer_name: customerName,
+            customer_email: customerEmail,
+            customer_phone: customerPhone,
+            customer_address: customerAddress,
+            order_id: orderId,
+            order_date: new Date().toLocaleDateString('en-AE', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            }),
+            order_items: orderItems,
+            order_total: orderTotal,
+            shop_name: "RASPBERRY Mobile Shop",
+            shop_phone: "+971 55 949 3269",
+            to_email: "raspberrymobilephones@gmail.com" // YOUR STORE EMAIL
+          }).then(
+            function(response) {
+              console.log('Store notification sent', response);
+            },
+            function(error) {
+              console.error('Store notification failed', error);
+            }
+          );
+          
+          // WhatsApp notification
+          const whatsappMsg = `📱 *New Order #${orderId}*\n\n` +
+                             `*Customer:* ${customerName}\n` +
+                             `*Phone:* ${customerPhone}\n` +
+                             `*Address:* ${customerAddress}\n\n` +
+                             `*Items:*\n${orderItems}\n\n` +
+                             `*Total:* AED ${orderTotal}`;
+          
+          window.open(`https://wa.me/971501003929?text=${encodeURIComponent(whatsappMsg)}`);
+          
+          // Success
+          alert(`Order #${orderId} confirmed!\nCheck ${customerEmail} for details.`);
+          cart.length = 0;
+          updateCart();
+          checkoutModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          customerForm.reset();
+          
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Order received! We\'ll contact you shortly.');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Confirm Order';
+        }
+      });
+      
+      // Contact form submission
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        
+        // Send form data using EmailJS
+        emailjs.send("service_a4s1kdf", "template_lkt1inl", {
+          name: formData.get('name'),
+          email: formData.get('email'),
+          phone: formData.get('phone'),
+          message: formData.get('message'),
+          subject: "New Contact Form Submission"
+        }).then(
+          function(response) {
+            alert('Message sent successfully! We will contact you soon.');
+            document.getElementById('contact-form').reset();
+          },
+          function(error) {
+            alert('Failed to send message. Please try again later.');
+            console.error('EmailJS error:', error);
+          }
+        );
+      });
+    });
+  </script>
 </body>
 </html>
